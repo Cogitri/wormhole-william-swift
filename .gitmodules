@@ -1,0 +1,3 @@
+[submodule "Sources/WormholeWilliamGo"]
+	path = Sources/WormholeWilliamGo
+	url = https://github.com/psanford/wormhole-william/

@@ -2,24 +2,24 @@
 import PackageDescription
 
 let package = Package(
-	name: "GetKit",
+	name: "WormholeWilliamSwift",
 	products: [
 		.library(
-			name: "GetKit",
-			targets: ["GetGo"]
+			name: "WormholeWilliamSwift",
+			targets: ["WormholeWilliamGo"]
 		),
 	],
 	targets: [
 		.target(
-			name: "GetKit"
+			name: "WormholeWilliamSwift"
 		),
 		.binaryTarget(
-			name: "GetGo",
-			path: "Frameworks/GetGo.xcframework"
+			name: "WormholeWilliamGo",
+			path: "Frameworks/WormholeWilliamGo.xcframework"
 		),
 		.testTarget(
-			name: "GetKitTests",
-			dependencies: ["GetKit", "GetGo"]
+			name: "WormholeWilliamSwiftTests",
+			dependencies: ["WormholeWilliamSwift", "WormholeWilliamGo"]
 		),
 	]
 )

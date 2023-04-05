@@ -1,12 +1,20 @@
-module github.com/alta/go-mobile-swift-package-example
+module github.com/Cogitri/wormwhole-william-swift
 
 go 1.17
 
-require golang.org/x/mobile v0.0.0-20210924032853-1c027f395ef7
+require golang.org/x/mobile v0.0.0-20230301163155-e0f57694e12c
 
 require (
-	golang.org/x/mod v0.4.2 // indirect
-	golang.org/x/sys v0.0.0-20210510120138-977fb7262007 // indirect
-	golang.org/x/tools v0.1.2 // indirect
-	golang.org/x/xerrors v0.0.0-20200804184101-5ec99f83aff1 // indirect
+	github.com/klauspost/compress v1.16.4 // indirect
+	golang.org/x/crypto v0.7.0 // indirect
+	golang.org/x/mod v0.6.0-dev.0.20220419223038-86c51ed26bb4 // indirect
+	golang.org/x/sync v0.0.0-20220819030929-7fc1605a5dde // indirect
+	golang.org/x/tools v0.1.12 // indirect
+	nhooyr.io/websocket v1.8.7 // indirect
+	salsa.debian.org/vasudev/gospake2 v0.0.0-20210510093858-d91629950ad1 // indirect
+)
+
+require (
+	github.com/psanford/wormhole-william v1.0.6
+	golang.org/x/sys v0.7.0 // indirect
 )
