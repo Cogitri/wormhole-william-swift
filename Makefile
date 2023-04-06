@@ -4,7 +4,7 @@ build: Frameworks $(wildcard Package.*) $(wildcard Sources/*/*)
 	swift build -c release
 
 .PHONY: Frameworks
-Frameworks: Frameworks/WormholeWilliamGo.xcframework
+Frameworks: Frameworks/WormholeWilliam.xcframework
 
 Frameworks/%.xcframework: Makefile tools $(wildcard Sources/*/*.go) $(shell which gomobile)
 	mkdir -p Frameworks

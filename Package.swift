@@ -6,7 +6,7 @@ let package = Package(
 	products: [
 		.library(
 			name: "WormholeWilliamSwift",
-			targets: ["WormholeWilliamGo"]
+			targets: ["WormholeWilliam"]
 		),
 	],
 	targets: [
@@ -14,12 +14,12 @@ let package = Package(
 			name: "WormholeWilliamSwift"
 		),
 		.binaryTarget(
-			name: "WormholeWilliamGo",
-			path: "Frameworks/WormholeWilliamGo.xcframework"
+			name: "WormholeWilliam",
+			path: "Frameworks/WormholeWilliam.xcframework"
 		),
 		.testTarget(
 			name: "WormholeWilliamSwiftTests",
-			dependencies: ["WormholeWilliamSwift", "WormholeWilliamGo"]
+			dependencies: ["WormholeWilliamSwift", "WormholeWilliam"]
 		),
 	]
 )
