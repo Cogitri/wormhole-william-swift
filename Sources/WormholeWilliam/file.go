@@ -3,8 +3,6 @@ package WormholeWilliam
 import (
 	"context"
 	"errors"
-	"fmt"
-	"io"
 	"os"
 	"path"
 
@@ -33,32 +31,6 @@ func PrepareSendFile(s *SenderContext, filePath string) error {
 
 	s.sendResult = &status
 	s.code = &code
-
-	return nil
-}
-
-func ReceiveFile(code string, targetFilePath string) error {
-	var c wormhole.Client
-
-	ctx := context.Background()
-	fileInfo, err := c.Receive(ctx, code)
-	if err != nil {
-		return err
-	}
-
-	if fileInfo.Type != wormhole.TransferFile {
-		return fmt.Errorf("expected a file transfer but got type %s", fileInfo.Type)
-	}
-
-	f, err := os.Open(targetFilePath)
-	if err != nil {
-		return err
-	}
-	_, err = io.Copy(f, fileInfo)
-
-	if err != nil {
-		return err
-	}
 
 	return nil
 }

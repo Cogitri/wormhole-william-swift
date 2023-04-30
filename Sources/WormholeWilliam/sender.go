@@ -15,11 +15,11 @@ func NewSenderContext() *SenderContext {
 	return &SenderContext{}
 }
 
-func GetCode(s *SenderContext) string {
+func SenderContextGetCode(s *SenderContext) string {
 	return *s.code
 }
 
-func FinishSend(s *SenderContext) error {
+func SenderContextFinishSend(s *SenderContext) error {
 	result := <-*s.sendResult
 
 	if !result.OK {
