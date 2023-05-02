@@ -18,7 +18,7 @@ func NewReceiverContext() *ReceiverContext {
 	return &ReceiverContext{}
 }
 
-func ReceiverContextInitReceive(r *ReceiverContext, code string) error {
+func ReceiverContextInit(r *ReceiverContext, code string) error {
 	var c wormhole.Client
 
 	ctx := context.Background()
