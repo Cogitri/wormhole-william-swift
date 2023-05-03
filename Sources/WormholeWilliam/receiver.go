@@ -56,7 +56,7 @@ func ReceiverContextReceiveFile(r *ReceiverContext, path string) error {
 		return fmt.Errorf("expected a file transfer but got type %s", r.msg.Type)
 	}
 
-	f, err := os.Open(path)
+	f, err := os.Create(path)
 	if err != nil {
 		return err
 	}
