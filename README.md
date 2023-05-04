@@ -1,24 +1,7 @@
-# [gomobile](https://pkg.go.dev/golang.org/x/mobile/cmd/gomobile) + [Swift Package Manager](https://swift.org/package-manager/)
+# WormholeWilliamSwift
 
-Example [Go](https://golang.org/) package built into an [XCFramework](https://developer.apple.com/documentation/swift_packages/distributing_binary_frameworks_as_swift_packages) for [Swift Package Manager](https://swift.org/package-manager/), targeting iOS, macOS, and macCatalyst targets.
-
-## Calling Go from Swift
-
-This package implements a simple API to fetch a URL using an HTTP `GET` request and return the response bytes.
-
-```swift
-var error: NSErrorPointer = nil
-guard let response = GoGet("https://golang.org/", error) else {
-	XCTFail("response == nil")
-	return
-}
-guard error == nil else {
-        return
-}
-guard let str = String(data: response, encoding: .utf8) else {
-        return
-}
-```
+Bindings for [wormhole-william](https://github.com/psanford/wormhole-william),
+an implementation of the Magic Wormhole protocol for peer-to-peer file transfer.
 
 ## Requirements
 
@@ -26,10 +9,4 @@ Go 1.16, Swift 5.3, and Xcode 11 or later.
 
 ## Usage
 
-To build the XCFramework and Swift package: `make build`
-
-To test: `make test`
-
-## Author
-
-© Alta Software, LLC
+WormholeWilliamSwift is available via Cocoapods.
