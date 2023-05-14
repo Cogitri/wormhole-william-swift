@@ -8,4 +8,9 @@ class VariablesTests: XCTestCase {
 		XCTAssert(WormholeWilliamGetDefaultRendezvousURL().contains("ws://relay.magic-wormhole.io:4000/v1"))
 		XCTAssert(WormholeWilliamGetDefaultTransitRelayAddress().contains("transit.magic-wormhole.io:4001"))
 	}
+
+	func testValidateCode() {
+		XCTAssert(!WormholeWilliamValidateCode("1-blueberry"))
+		XCTAssert(WormholeWilliamValidateCode("7-crossover-clockwork"))
+	}
 }
