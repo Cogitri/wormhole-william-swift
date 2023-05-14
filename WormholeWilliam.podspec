@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name = "WormholeWilliam"
-    s.version = "0.0.4"
+    s.version = "0.0.5"
     s.osx.deployment_target = '11'
 
     s.prepare_command = "make"
